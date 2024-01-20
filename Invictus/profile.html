@@ -14,6 +14,10 @@
     width: 100%;
 }
 
+p{
+    color:red;
+    font-size: 15px;
+}
 
     .adjust{
      margin-left: 20px;
@@ -22,7 +26,7 @@
     .header {
         
         width:100%;
-        background-color: rgb(24, 152, 170);
+        background-color: rgb(5, 64, 72);
         color: #fff;
         padding: 20px;
         text-align: left;
@@ -30,44 +34,64 @@
         align-items: center;
     }
 
-    .profile {
-        margin-left: 20px;
-        padding: 10px;
-    }
-
-    .dp {
-        margin-top: 30px;
-        width: 70px;
-        height: 80px;
-        background-color: #ffffff;
-        border-radius: 50%;
-        margin-left: 20px; 
-    }
+    .dp { 
+      width: 80px;
+      height: 80px;
+      position: absolute;
+      top: 65px;
+      left: 600px;
+      background-color: #d9d9d9;
+      border-radius: 80px/80.5px;
+    } 
 
     .details {
+        background-image: url('https://ideogram.ai/api/images/direct/Or2VdDZJT363xrQki0Nu3A.jpg');
+            background-size: 250px 250px;
+            background-repeat: no-repeat;
+            background-position: center right;
+            
+        border: solid;
+        border-color: #d9d9d9;
         flex: 1; 
         background-color: rgb(24, 152, 170);
         padding: 20px;
         color: #fff;
-        margin-left: 20px; 
+        margin: 20px; 
         line-height: 25px;
     }
     .personal-info{
+
         margin-top: 30px;
+        color:white;
+        margin-left: 150px;
+    }
+    .edit{
+        padding: 0;
+        background-color: rgb(24, 152, 170);
+        box-shadow: none;
+        position: absolute;
+        width:105px;
+        margin-left:420px;
+        margin-top:100px;
+        background-color: 0;
+        
+       
+    }
+    .edit-icon{
+        width:30px;  
+        margin-top: 2px;
+        margin-right: 5px;
+        height: 30px;
     }
 
-    .edit-icon{
-        width:40px;
-        margin-left:555px;
-    }
     .edit-button{
+        width:50px;
+        display: inline-block;
         background-color: white;
         color: black;
-        padding: 10px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        margin-left:550px;
-        
+        padding: 5px;
+        margin: 0px;
+        height: 30px;  
     }
     .edit-button:hover{
         background-color: #f7f7f7;
@@ -92,6 +116,7 @@
         color:white;
     }
     .section-container,div {
+        
             max-width: 800px;
             margin: 0 auto;
             background-color: #ffffff;;
@@ -115,6 +140,12 @@
             margin-bottom: 1rem;
         }
         
+        .upload-button{
+            margin-right: 0;
+            background-color: none;
+            border: solid;
+            border-color: rgb(24, 152, 170);
+        }
        
         label {
             display: block;
@@ -194,9 +225,11 @@
             +91 869372164<br>
             Female/19
         </p>
-        <img class="edit-icon" src="icons8-edit-50.png">
-        <button class="edit-button">Edit</button>
     </div>
+    <div class="edit">
+        <img class="edit-icon" src="icons8-edit-50.png">
+        <button class="edit-button" onclick="goToEditPage()">EDIT</button>
+    </div>    
 </div>
        
 <div class="main-container">
@@ -237,12 +270,12 @@
 
     <div class="upload-section">
         <label for="file-upload" class="custom-file-upload">
-            Upload your resume
+            Select file
         </label>
+        <p>(pdf, doc, docx file format allowed.)</p>
         <input type="file" id="file-upload" name="file" accept=".pdf, .doc, .docx">
-
-        <!-- Display selected file name (optional) -->
         <div id="file-name"></div>
+        <button class="upload-button" type="button" onclick="uploadResume()">Upload resume</button>
     </div>
 
 
@@ -263,11 +296,15 @@
         console.log('User Profile Updated:', data);
         alert('Profile Updated Successfully');
     }
-
+     function uploadResume(){    
     document.getElementById('file-upload').addEventListener('change', function() {
             const fileName = this.files[0].name;
             document.getElementById('file-name').innerText = `Selected File: ${fileName}`;
         });
+        const data = {};
+        console.log('file uploded:',data );
+        alert('file uploded Successfully');
+    }
 
     function goToEditPage() {
         window.location.href = 'edit-profile.html';
