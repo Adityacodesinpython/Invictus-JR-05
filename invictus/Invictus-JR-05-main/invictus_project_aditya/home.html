@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tech-Titans</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    
+    <div class="wrapperout">
+
+        <div class="wrapper">
+            <input type="checkbox" id="btn" hidden>
+            <label for="btn" class="menu-btn">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-times"></i>
+            </label>
+            <nav id="sidebar">
+                <div class="title"><i>MENU</i></div>
+                <ul class="list-items">
+                    <li><a href="#"><i class="fas fa-home"></i>Home</a></li>
+                    <li><a href="#"><i class="fas fa-address-card"></i>About Us</a></li>
+                    <li><a href="#"><i class="fas fa-suitcase"></i>Placement</a></li>
+                    <li><a href="#"><i class="fas fa-message"></i>Inbox</a></li>
+                    <li><a href="#"><i class="fas fa-user"></i>Profile</a></li>
+                    <li><a href="#"><i class="fas fa-envelope"></i>Contact us</a></li>
+                    <div class="icons">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="center">
+            <h1>Welcome To InternsHub</h1>
+            <h2>"InternsHub: Where Aspirations Meet Opportunities - Unleashing Your Potential through Purposeful Internships"</h2>
+            <div class="buttons">
+                <button>Login</button>
+          
+                <button id="registerBtn" class="btn2">Register</button>
+
+            </div>
+        </div>
+        <style>
+            body, h1, h2, h3, h4, h5, h6, p {
+                font-family: 'Poppins', sans-serif;
+            }
+        </style>
+
+        <script>
+            document.getElementById('registerBtn').addEventListener('click', function () {
+                var registrationType = prompt("Are you registering as a Student or an Employer?").toLowerCase();
+        
+                if (registrationType === 'student') {
+                    window.location.href = 'student.html'; // Replace with the actual URL for student registration
+                } else if (registrationType === 'employer') {
+                    window.location.href = 'emloyer.html'; // Replace with the actual URL for employer registration
+                } else {
+                    alert("Invalid choice. Please choose 'Student' or 'Employer'.");
+                }
+            });
+        </script>
+        
+        
+        <div class="placement">
+            <div class="container">
+                <div class="line"></div>
+                <h1>Placement Hightlights</h1>
+                <div class="line"></div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="column">
+                <h2>Microsoft</h2>
+                
+                <div>
+                    <img src="images/test3.jpg" alt="Dummy Image" width="400px">
+
+                </div>
+
+               
+            </div>
+            <div class="column">
+                <h2>Accenture</h2>
+                <div style="display: flex;">
+                   
+                    <!-- <div class="vertical-line"></div> -->
+                    <img src="images/test3.jpg" alt="Dummy Image"width="400px">
+
+                </div>
+            </div>
+            <div class="column">
+                <h2>Deloitte</h2>
+                <div style="display: flex;">
+                    <!-- <div class="vertical-line"></div> -->
+                    <img src="images/test3.jpg" alt="Dummy Image"width="400px">
+                </div>
+            </div>
+        </div>
+        
+        <div class="students">
+            <div class="container">
+                
+                <div class="line"></div>
+                <h1>Our Students are at</h1>
+                <div class="line"></div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="column">
+                <div>
+                    <img src="images/barcc.png" alt="Dummy Image" width="300px">
+                </div>
+            </div>
+            <div class="column">
+                <div style="display: flex;">
+                    <!-- <div class="vertical-line" style="margin-right: 50px;"></div> -->
+                    <img src="images/google.png " alt="Dummy Image" width="250px">
+
+                </div>
+            </div>
+            <div class="column">
+                <div style="display: flex;">
+                    <!-- <div class="vertical-line" style="margin-right: 40px;"></div> -->
+                    <img src="images/micro.png" alt="Dummy Image"width="250x">
+                </div>
+            </div>
+            <div class="column">
+                <div style="display: flex;">
+                    <!-- <div class="vertical-line" style="margin-right: 70px;"></div> -->
+                    <img src="images/jpm.png" alt="Dummy Image"width="170px">
+                </div>
+            </div>
+        </div>
+        
+        <div class="jobs-list-container">
+            <h2>9 Jobs Available</h2>
+
+            <input class="job-search" type="text" placeholder="Search for jobs..." />
+
+            <div class="jobs"></div>
+        </div>
+
+        <div class="appreciations">
+            <div class="container">
+                <div class="line"></div>
+                <h2>Testimonials & Appreciations</h2>
+                <div class="line"></div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="column">
+                <!-- <h2>Column 1</h2> -->
+                <div>
+                    <img src="images/t1.png" alt="Dummy Image" width="320px">
+
+                </div>
+            </div>
+            <div class="column">
+                <!-- <h2>Column 2</h2> -->
+                <div style="display: flex;">
+                    <div class="vertical-line"></div>
+                    <img src="images/t2.jpg" alt="Dummy Image" width="320px">
+
+                </div>
+            </div>
+            <div class="column">
+                <!-- <h2>Column 3</h2> -->
+                <div style="display: flex;">
+                    <div class="vertical-line"></div>
+                    <img src="images/t3.jpg" alt="Dummy Image" width="320px">
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer-distributed">
+
+            <div class="footer-left">
+                <h3>Interns-<span>Hub</span></h3>
+        
+                <p class="footer-company-name">Copyright © 2024 <strong>Tech-Titans</strong> All rights reserved</p>
+            </div>
+    
+            <div class="footer-center">
+                <div>
+                    <i class="fa fa-map-marker"></i>
+                    <p><span>Chembur</span>
+                        Mumbai</p>
+                </div>
+    
+                <div>
+                    <i class="fa fa-phone"></i>
+                    <p>+91 9999992299</p>
+                </div>
+                <div>
+                    <i class="fa fa-envelope"></i>
+                    <p><a href="#">xyz@gmail.com</a></p>
+                </div>
+            </div>
+            <div class="footer-right">
+                <p class="footer-company-about">
+                    <span>About the company</span>
+                    <strong>Interns-Hub</strong> is an initiative to improve the way 
+                    how internships are matched with candidates, considering both paid and 
+                    unpaid opportunities. We aim to make this process more efficient and 
+                    effective, focusing on factors like skills and preferences. 
+                </p>
+                <div class="footer-icons">
+                    <div class="icons">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+<script src="home.js"></script>
+
+</html>
