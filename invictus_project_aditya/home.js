@@ -67,6 +67,15 @@ const jobs = [
           "Responsible for creating and executing marketing strategies to promote a company or product.",
         openPositions: "5",
         link: "#",
+      },
+
+      {
+        title: "Project Manager",
+        image: "images/laptop.png",
+        details:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore .",
+        openPositions: "1",
+        link: "#",
       }
   ];
   

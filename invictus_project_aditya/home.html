@@ -5,11 +5,17 @@
     <meta charset="UTF-8">
     <title>Tech-Titans</title>
     <link rel="stylesheet" href="style2.css">
+    <script src="script.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Add this inside the <head> section of your HTML -->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
 </head>
 
 <body>
+    
     <div class="wrapperout">
 
         <div class="wrapper">
@@ -21,12 +27,12 @@
             <nav id="sidebar">
                 <div class="title"><i>MENU</i></div>
                 <ul class="list-items">
-                    <li><a href="#"><i class="fas fa-home"></i>Home</a></li>
-                    <li><a href="#"><i class="fas fa-address-card"></i>About Us</a></li>
-                    <li><a href="#"><i class="fas fa-suitcase"></i>Placement</a></li>
-                    <li><a href="#"><i class="fas fa-message"></i>Inbox</a></li>
-                    <li><a href="#"><i class="fas fa-user"></i>Profile</a></li>
-                    <li><a href="#"><i class="fas fa-envelope"></i>Contact us</a></li>
+                    <li><a href="#home"><i class="fas fa-home"></i>Home</a></li>
+                    <li><a href="#about"><i class="fas fa-address-card"></i>Search Jobs</a></li>
+                    <li><a href="placement.html"><i class="fas fa-suitcase"></i>Placement</a></li>
+                    <li><a href="inbox.html"><i class="fas fa-message"></i>Inbox</a></li>
+                    <li><a href="profile.html"><i class="fas fa-user"></i>Profile</a></li>
+                    <li><a href="#footer"><i class="fas fa-envelope"></i>Contact us</a></li>
                     <div class="icons">
                         <a href="#"><i class="fab fa-twitter"></i></a>
                         <a href="#"><i class="fab fa-github"></i></a>
@@ -35,14 +41,37 @@
             </nav>
         </div>
 
-        <div class="center">
-            <h1>Welcome To Interns-Hub</h1>
-            <h2>Let's get u a job!</h2>
-            <div class="buttons">
-                <button>Login</button>
-                <button class="btn2">Register</button>
-            </div>
+      <!-- Modify the welcome text -->
+<div class="center" id="home">
+    <h1><span class="typed-text"></span></h1>
+    <h2>"InternsHub: Where Aspirations Meet Opportunities - Unleashing Your Potential through Purposeful Internships"</h2>
+    <div class="buttons">
+        <button>Login</button>
+        <button id="registerBtn" class="btn2">Register</button>
+    </div>
+</div>
+
         </div>
+        <style>
+            body, h1, h2, h3, h4, h5, h6, p {
+                font-family: 'Poppins', sans-serif;
+            }
+        </style>
+
+        <script>
+            document.getElementById('registerBtn').addEventListener('click', function () {
+                var registrationType = prompt("Are you registering as a Student or an Employer?").toLowerCase();
+        
+                if (registrationType === 'student') {
+                    window.location.href = 'student.html'; // Replace with the actual URL for student registration
+                } else if (registrationType === 'employer') {
+                    window.location.href = 'emloyer.html'; // Replace with the actual URL for employer registration
+                } else {
+                    alert("Invalid choice. Please choose 'Student' or 'Employer'.");
+                }
+            });
+        </script>
+        
         
         <div class="placement">
             <div class="container">
@@ -54,33 +83,38 @@
 
         <div class="row">
             <div class="column">
-                <h2>Column 1</h2>
+                <h2>Microsoft</h2>
+                
                 <div>
-                    <img src="https://via.placeholder.com/150" alt="Dummy Image">
+                    <img src="images/test3.jpg" alt="Dummy Image" width="400px">
+
+                </div>
+
+               
+            </div>
+            <div class="column">
+                <h2>Accenture</h2>
+                <div style="display: flex;">
+                   
+                    <!-- <div class="vertical-line"></div> -->
+                    <img src="images/test3.jpg" alt="Dummy Image"width="400px">
 
                 </div>
             </div>
             <div class="column">
-                <h2>Column 2</h2>
+                <h2>Deloitte</h2>
                 <div style="display: flex;">
-                    <div class="vertical-line"></div>
-                    <img src="https://via.placeholder.com/150" alt="Dummy Image">
-
-                </div>
-            </div>
-            <div class="column">
-                <h2>Column 3</h2>
-                <div style="display: flex;">
-                    <div class="vertical-line"></div>
-                    <img src="https://via.placeholder.com/150" alt="Dummy Image">
+                    <!-- <div class="vertical-line"></div> -->
+                    <img src="images/test3.jpg" alt="Dummy Image"width="400px">
                 </div>
             </div>
         </div>
         
         <div class="students">
             <div class="container">
+                
                 <div class="line"></div>
-                <h1>Our Students r at</h1>
+                <h1>Our Students are at</h1>
                 <div class="line"></div>
             </div>
         </div>
@@ -88,32 +122,32 @@
         <div class="row">
             <div class="column">
                 <div>
-                    <img src="images/barclay.jfif" style="margin-top: 40px;" alt="Dummy Image" width="300px">
+                    <img src="images/barcc.png" alt="Dummy Image" width="300px">
                 </div>
             </div>
             <div class="column">
                 <div style="display: flex;">
-                    <div class="vertical-line" style="margin-right: 50px;"></div>
-                    <img src="images/google.png" alt="Dummy Image" width="300px">
+                    <!-- <div class="vertical-line" style="margin-right: 50px;"></div> -->
+                    <img src="images/google.png " alt="Dummy Image" width="250px">
 
                 </div>
             </div>
             <div class="column">
                 <div style="display: flex;">
-                    <div class="vertical-line" style="margin-right: 40px;"></div>
-                    <img src="images/microsoft.jpg" alt="Dummy Image"width="300px">
+                    <!-- <div class="vertical-line" style="margin-right: 40px;"></div> -->
+                    <img src="images/micro.png" alt="Dummy Image"width="250x">
                 </div>
             </div>
             <div class="column">
                 <div style="display: flex;">
-                    <div class="vertical-line" style="margin-right: 70px;"></div>
-                    <img src="images/jpm.png" alt="Dummy Image"width="200px">
+                    <!-- <div class="vertical-line" style="margin-right: 70px;"></div> -->
+                    <img src="images/jpm.png" alt="Dummy Image"width="170px">
                 </div>
             </div>
         </div>
         
-        <div class="jobs-list-container">
-            <h2>5 Jobs</h2>
+        <div class="jobs-list-container" id="about">
+            <h2>9 Jobs Available</h2>
 
             <input class="job-search" type="text" placeholder="Search for jobs..." />
 
@@ -123,37 +157,37 @@
         <div class="appreciations">
             <div class="container">
                 <div class="line"></div>
-                <h1>Testimonials & Appreciations</h1>
+                <h2>Testimonials & Appreciations</h2>
                 <div class="line"></div>
             </div>
         </div>
 
         <div class="row">
             <div class="column">
-                <h2>Column 1</h2>
+                <!-- <h2>Column 1</h2> -->
                 <div>
-                    <img src="https://via.placeholder.com/150" alt="Dummy Image">
+                    <img src="images/t1.png" alt="Dummy Image" width="320px">
 
                 </div>
             </div>
             <div class="column">
-                <h2>Column 2</h2>
+                <!-- <h2>Column 2</h2> -->
                 <div style="display: flex;">
                     <div class="vertical-line"></div>
-                    <img src="https://via.placeholder.com/150" alt="Dummy Image">
+                    <img src="images/t2.jpg" alt="Dummy Image" width="320px">
 
                 </div>
             </div>
             <div class="column">
-                <h2>Column 3</h2>
+                <!-- <h2>Column 3</h2> -->
                 <div style="display: flex;">
                     <div class="vertical-line"></div>
-                    <img src="https://via.placeholder.com/150" alt="Dummy Image">
+                    <img src="images/t3.jpg" alt="Dummy Image" width="320px">
                 </div>
             </div>
         </div>
 
-        <footer class="footer-distributed">
+        <footer class="footer-distributed" id="footer">
 
             <div class="footer-left">
                 <h3>Interns-<span>Hub</span></h3>
@@ -194,6 +228,20 @@
             </div>
         </footer>
     </div>
+  
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var options = {
+        strings: ["Welcome To InternsHub"],
+        typeSpeed: 60, 
+        backSpeed: 40, 
+        loop: true, 
+      };
+  
+      var typed = new Typed('.typed-text', options);
+    });
+  </script>
+  
 </body>
 <script src="home.js"></script>
 
