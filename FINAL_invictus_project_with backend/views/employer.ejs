@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employer Registration - Interns Hub</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
+  <link rel="stylesheet" href="styles/employer.css">
+
+</head>
+
+<body>
+
+  <header>
+    Welcome To InternsHub
+  </header>
+
+  <a class="register-link" href="#">Register Here</a>
+  <form action="/emp-register" method="post">
+
+    <label for="institution">Institution Name:</label>
+    <input type="text" id="institution" name="institution" required>
+
+    <label for=" Institute email">Institute Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+
+    <label for="skills">Skills Interested In:</label>
+    <div class="custom-select">
+      <div class="selected-option" onclick="toggleOptions()">Select an option</div>
+      <div class="options-container" id="options-container">
+        <div onclick="selectOption('web development')">Web Development</div>
+        <div onclick="selectOption('mobile app development')">Mobile App Development</div>
+        <div onclick="selectOption('data science')">Data Science</div>
+        <div onclick="selectOption('graphic design')">Graphic Design</div>
+        <div onclick="selectOption('digital marketing')">Digital Marketing</div>
+        <div onclick="selectOption('artificial intelligence')">Artificial Intelligence</div>
+      </div>
+    </div>
+
+    <button type="submit">Register</button>
+  </form>
+
+  <script>
+    function toggleOptions() {
+      const optionsContainer = document.getElementById('options-container');
+      optionsContainer.style.display = optionsContainer.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function selectOption(value) {
+      const selectedOption = document.querySelector('.selected-option');
+      selectedOption.textContent = value;
+      toggleOptions();
+    }
+  </script>
+
+</body>
+
+</html>

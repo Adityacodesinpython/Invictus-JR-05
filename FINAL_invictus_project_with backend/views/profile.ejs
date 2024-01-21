@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+
+    <title>User Profile</title>
+    <link rel="stylesheet" href="/styles/profile.css">
+</head>
+<body>
+   <div class="header">
+    
+    <div class="dp"></div>
+    <div class="details">
+        <p class="personal-info">
+            SANNIDHI KAILAJE<br>
+            06sannidhi@gmail.com<br>
+            +91 869372164<br>
+            Female/19
+        </p>
+    </div>
+    <div class="edit">
+        <img class="edit-icon" src="/images/icons8-edit-50.png">
+        <button class="edit-button" onclick="goToEditPage()">EDIT</button>
+    </div>    
+</div>
+       
+<div class="main-container">
+    <div class="section-container education">
+        <h2 class="adjust">Education Details</h2>
+        <label for="education"></label>
+        <input type="text" id="education" name="education" required>
+        <button class="add">+ add Education Qualifications</button>
+    </div>
+
+    <div class="section-container work-experience">
+        <h2 class="adjust">Work Experience</h2>
+        <label for="experience"></label>
+        <input type="text" id="experience" name="experience" required>
+        <button class="add">+ add Work Experience</button>
+    </div>
+
+    <div class="section-container skills">
+        <h2 class="adjust">Skills</h2>
+        <label for="skills"></label>
+        <input type="text" id="skills" name="skills" required>
+        <button class="add">+ add Skills</button>
+    </div>
+
+    <div class="section-container projects">
+        <h2 class="adjust">Projects</h2>
+        <label for="projects"></label>
+        <input type="text" id="projects" name="projects" required>
+        <button class="add">+ add Projects</button>
+    </div>
+
+    <div class="section-container certifications">
+        <h2 class="adjust">Certifications</h2>
+        <label for="certifications"></label>
+        <input type="text" id="certifications" name="certifications" required>
+        <button class="add">+ add Certifications</button>
+    </div>
+
+    <div class="upload-section">
+        <label for="file-upload" class="custom-file-upload">
+            Select file
+        </label>
+        <p>(pdf, doc, docx file format allowed.)</p>
+        <input type="file" id="file-upload" name="file" accept=".pdf, .doc, .docx">
+        <div id="file-name"></div>
+        <button class="upload-button" type="button" onclick="uploadResume()">Upload resume</button>
+    </div>
+
+
+    <button class="update-button" type="button" onclick="updateProfile()">Update Profile</button>
+</div>
+
+<script>
+    function updateProfile() {
+        const data = {};
+        const sections = document.querySelectorAll('.section-container');
+        sections.forEach(section => {
+            const inputs = section.querySelectorAll('input, textarea');
+            inputs.forEach(input => {
+                data[input.name] = input.value;
+            });
+        });
+
+        console.log('User Profile Updated:', data);
+        alert('Profile Updated Successfully');
+    }
+     function uploadResume(){    
+    document.getElementById('file-upload').addEventListener('change', function() {
+            const fileName = this.files[0].name;
+            document.getElementById('file-name').innerText = `Selected File: ${fileName}`;
+        });
+        const data = {};
+        console.log('file uploded:',data );
+        alert('file uploded Successfully');
+    }
+
+    
+</script>
+</body>
+</html>

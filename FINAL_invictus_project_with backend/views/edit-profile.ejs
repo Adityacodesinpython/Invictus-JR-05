@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    
+    <link rel="stylesheet" href="/styles/edit-profile.css">
+</head>
+<body>
+    <div class="header">
+     <div class="dp"></div>  
+    </div >
+    <div class="form-container">
+        <form>
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+    
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+    
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+    
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="" disabled selected>Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+    
+            <button type="save">Save</button>
+        </form>
+    </div>
+</body>

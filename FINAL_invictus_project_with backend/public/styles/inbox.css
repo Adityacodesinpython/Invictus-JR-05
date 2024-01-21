@@ -1,0 +1,90 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #dcd3d3;
+    color: rgb(5, 44, 49);
+}
+
+.inbox-container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: rgb(24, 152, 170);
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(149, 201, 211, 0.1);
+    border-radius: 15px;
+}
+
+.header1 {
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: aliceblue;
+    
+}
+
+.internship-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.internship-card {
+    background-color: #b4eded;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.internship-card:hover {
+    transform: scale(1.05);
+}
+
+.card-header {
+    border-bottom: 2px solid #03262c;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+
+.card-header h2 {
+    color: #052c33;
+    margin-bottom: 5px;
+}
+
+.card-header p {
+    color: #052c33;
+    margin: 0;
+}
+
+.card-body {
+    color: #052c33;
+}
+
+.animated {
+    animation: fadeInUp 0.8s ease-out, slideInLeft 0.8s ease-out;
+}
+
+
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

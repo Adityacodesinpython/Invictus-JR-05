@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interns Hub Registration</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
+  <link rel="stylesheet" href="styles/student.css">
+</head>
+<body>
+
+  <header>
+    Welcome To InternsHub
+  </header>
+
+  <a class="register-link" href="#">Register Here</a>
+
+  <form action="/register" method="post">
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="firstName" required>
+
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="lastName" required>
+
+    <label for="gender">Gender:</label>
+    <select id="gender" name="gender" required>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+    </select>
+
+    <label for="languages">Languages Known:</label>
+    <div class="checkbox-group">
+      <label><input type="checkbox" name="languages" value="english">English</label>
+      <label><input type="checkbox" name="languages" value="spanish">Hindi</label>
+      <label><input type="checkbox" name="languages" value="french">French</label>
+      <label><input type="checkbox" name="languages" value="german">German</label>
+      <label><input type="checkbox" name="languages" value="chinese"> Chinese</label> 
+     <label><input type="checkbox" name="languages" value="japanese"> Japanese</label>
+    </div>
+
+    <label for="skills">Skills Interested In:</label>
+    <div class="custom-select">
+      <div class="selected-option" onclick="toggleOptions()">Select an option</div>
+      <div class="options-container" id="options-container">
+        <div onclick="selectOption('web development')">Web Development</div>
+        <div onclick="selectOption('mobile app development')">Mobile App Development</div>
+        <div onclick="selectOption('data science')">Data Science</div>
+        <div onclick="selectOption('graphic design')">Graphic Design</div>
+        <div onclick="selectOption('digital marketing')">Digital Marketing</div>
+        <div onclick="selectOption('artificial intelligence')">Artificial Intelligence</div>
+      </div>
+    </div>
+
+    <button type="submit">Register</button>
+  </form>
+
+  <footer>
+    &copy; 2024 Interns Hub. All rights reserved.
+  </footer>
+
+  <script>
+    function toggleOptions() {
+      const optionsContainer = document.getElementById('options-container');
+      optionsContainer.style.display = optionsContainer.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function selectOption(value) {
+      const selectedOption = document.querySelector('.selected-option');
+      selectedOption.textContent = value;
+      toggleOptions();
+    }
+  </script>
+
+
+
+
+</body>
+</html>
