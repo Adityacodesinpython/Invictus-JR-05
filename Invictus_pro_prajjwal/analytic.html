@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Admin Dashboard</title>
+
+    <!-- Montserrat Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="grid-container">
+
+      <!-- Header -->
+      <header class="header">
+        <div class="menu-icon" onclick="openSidebar()">
+          <span class="material-icons-outlined">menu</span>
+        </div>
+        <div class="header-left">
+          <span class="material-icons-outlined">search</span>
+        </div>
+        <div class="header-right">
+          <span class="material-icons-outlined">notifications</span>
+          <span class="material-icons-outlined">email</span>
+          <span class="material-icons-outlined">account_circle</span>
+        </div>
+      </header>
+      <!-- End Header -->
+
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="logo">
+          <img src="images/logo.jpg" alt="logo" />
+          <h2>Internshub</h2>
+        </div>
+        <ul class="links">
+          <h4>Main Menu</h4>
+          <li>
+            <span class="material-symbols-outlined">Profile</span>
+            <a href="#">Profile</a>
+          </li>
+          <li>
+            <span class="material-symbols-outlined">Placement</span>
+            <a href="#">Placement</a>
+          </li>
+          <li>
+            <span class="material-symbols-outlined">Status</span>
+            <a href="#">Status</a>
+          </li>
+          <hr />
+          <h4>Advanced</h4>
+          <li>
+            <span class="material-symbols-outlined">Filter</span>
+            <a href="#">Filter</a>
+          </li>
+          <li>
+            <span class="material-symbols-outlined">Personlised Mails</span>
+            <a href="#">Personlised Mails</a>
+          </li>
+          <li>
+            <span class="material-symbols-outlined">Analytic</span>
+            <a href="#">Analytic</a>
+          </li>
+          <hr />
+          <h4>Account</h4>
+          <li>
+            <span class="material-symbols-outlined">settings</span>
+            <a href="#">Settings</a>
+          </li>
+          <li class="logout-link">
+            <span class="material-symbols-outlined">logout</span>
+            <a href="#">Logout</a>
+          </li>
+        </ul>
+      </aside>
+      <!-- End Sidebar -->
+
+      <!-- Main -->
+      <main class="main-container">
+        <div class="main-title">
+          <p class="font-weight-bold">DASHBOARD</p>
+        </div>
+
+        <div class="main-cards">
+
+          <div class="card">
+            <div class="card-inner">
+              <p class="text-primary">Companies</p>
+              <span class="material-icons-outlined text-blue">inventory_2</span>
+            </div>
+            <span class="text-primary font-weight-bold">249</span>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <p class="text-primary">PURCHASE ORDERS</p>
+              <span class="material-icons-outlined text-orange">add_shopping_cart</span>
+            </div>
+            <span class="text-primary font-weight-bold">83</span>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <p class="text-primary">Shortlisted</p>
+              <span class="material-icons-outlined text-green">check</span>
+            </div>
+            <span class="text-primary font-weight-bold">79</span>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <p class="text-primary">Notification</p>
+              <span class="material-icons-outlined text-red">notification_important</span>
+            </div>
+            <span class="text-primary font-weight-bold">56</span>
+          </div>
+
+        </div>
+
+        <div class="charts">
+
+          <div class="charts-card">
+            <p class="chart-title">Top 5 Companies</p>
+            <div id="bar-chart"></div>
+          </div>
+
+          <div class="charts-card">
+            <p class="chart-title">Selection Chart</p>
+            <div id="area-chart"></div>
+          </div>
+
+        </div>
+      </main>
+      <!-- End Main -->
+
+    </div>
+
+    <!-- Scripts -->
+    <!-- ApexCharts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.3/apexcharts.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script2.js"></script>
+  </body>
+</html>
