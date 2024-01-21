@@ -20,7 +20,7 @@ const initSlider = () => {
             const boundedPosition = Math.max(0, Math.min(maxThumbPosition, newThumbPosition));
             const scrollPosition = (boundedPosition / maxThumbPosition) * maxScrollLeft;
             
-            scrollbarThumb.style.left = ${boundedPosition}px;
+            scrollbarThumb.style.left = '${boundedPosition}px';
             imageList.scrollLeft = scrollPosition;
         }
 
@@ -54,7 +54,7 @@ const initSlider = () => {
     const updateScrollThumbPosition = () => {
         const scrollPosition = imageList.scrollLeft;
         const thumbPosition = (scrollPosition / maxScrollLeft) * (sliderScrollbar.clientWidth - scrollbarThumb.offsetWidth);
-        scrollbarThumb.style.left = ${thumbPosition}px;
+        scrollbarThumb.style.left = '${thumbPosition}px';
     }
 
     // Call these two functions when image list scrolls
